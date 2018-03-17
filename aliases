@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+
+alias ..="cd .."
+alias ...="cd ../.."
+
+
+alias hide="chflags hidden"
+alias unhide="chflags nohidden"
+
+
+TEXTASTIC="$HOME/Library/Mobile Documents/M6HJR9W95L~com~textasticapp~textastic/Documents"
+NOTEBOOKS="$TEXTASTIC/Notebooks"
+DEVELOPER="$TEXTASTIC/Developer"
+alias tohome="cd ~/"
+alias tocode='cd "$DEVELOPER"'
+alias tonote='cd "$NOTEBOOKS"'
+
+
+alias python="python3"
+alias activate="source venv/bin/activate"
+
+
+# PostgreSQL
+alias psqlstart="pg_ctl -D /usr/local/var/postgres start"
+alias psqlstop="pg_ctl -D /usr/local/var/postgres stop"
+
+
+# Hide/show all desktop icons (useful when presenting)
+# LINK: https://github.com/donnemartin/dev-setup/blob/master/.bash_profile
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
