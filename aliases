@@ -19,6 +19,7 @@ alias tonote='cd "$NOTEBOOKS"'
 
 alias python="python3"
 alias activate="source venv/bin/activate"
+alias piptree="pipdeptree"
 
 
 # PostgreSQL
