@@ -3,6 +3,9 @@
 alias to="cd"
 alias ..="cd .."
 alias ...="cd ../.."
+alias d="cd ~/Developer"
+alias dp="cd ~/Developer/projects"
+alias ds="cd ~/Developer/learning"
 
 alias hide="chflags hidden"
 alias unhide="chflags nohidden"
