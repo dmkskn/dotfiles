@@ -1,9 +1,13 @@
-install: install-aliases install-bashrc install-bash-profile
+install: install-aliases install-completions install-bashrc install-bash-profile 
 
 
 install-aliases:
 	rm -f ~/.aliases
 	ln -s `pwd`/aliases ~/.aliases
+
+install-completions:
+	rm -f ~/.completions
+	ln -s `pwd`/completions ~/.completions
 
 install-bashrc:
 	rm -f ~/.bashrc

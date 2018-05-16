@@ -12,6 +12,7 @@ shopt -s cdspell;
 
 source ~/.bashrc
 source ~/.aliases
+source ~/.completions
 
 
 
