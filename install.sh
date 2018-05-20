@@ -28,6 +28,7 @@ echo -n "Installing bash-completion..." && brew install bash-completion > /dev/n
 echo -n "Installing python3..." && brew install python3 > /dev/null && echo " Done."
 echo -n "Installing pipenv..." && brew install pipenv > /dev/null && echo " Done."
 echo -n "Installing mas..." && brew install mas > /dev/null && echo " Done."
+echo -n "Installing tag..." && brew install tag > /dev/null && echo " Done."
 
 
 # Cask
