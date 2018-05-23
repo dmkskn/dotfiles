@@ -4,9 +4,10 @@ alias to="cd"
 alias ..="cd .."
 alias ...="cd ../.."
 alias h="cd ~"
+alias t="cd ~/Desktop"
 alias d="cd ~/Developer"
 alias dp="cd ~/Developer/projects"
-alias ds="cd ~/Developer/learning"
+alias dl="cd ~/Developer/learning"
 
 alias hide="chflags hidden"
 alias unhide="chflags nohidden"
@@ -15,7 +16,9 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 alias pip="pip3"
 alias python="python3"
-alias activate="source venv/bin/activate"
+alias cv="python3 -m venv venv"
+alias av="source venv/bin/activate"
+alias dv="deactivate"
 
 # Print each path on a separate line
 alias path='echo -e ${PATH//:/\\n}'
