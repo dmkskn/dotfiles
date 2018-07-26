@@ -5,9 +5,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias h="cd ~"
 alias t="cd ~/Desktop"
-alias d="cd ~/Developer"
-alias dp="cd ~/Developer/projects"
-alias dl="cd ~/Developer/learning"
+
+# Write DEVELOPER in .bash_local
+alias d="cd ${DEVELOPER}"
+alias dp="cd ${DEVELOPER}/projects"
+alias dl="cd ${DEVELOPER}/learning"
 
 alias hide="chflags hidden"
 alias unhide="chflags nohidden"
