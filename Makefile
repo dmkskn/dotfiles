@@ -1,4 +1,4 @@
-install: install-aliases install-completions install-bashrc install-bash-profile 
+install: install-aliases install-completions install-bashrc install-bash-profile install-vimrc
 
 
 install-aliases:
@@ -16,3 +16,7 @@ install-bashrc:
 install-bash-profile:
 	rm -f ~/.bash_profile
 	ln -s "`pwd`/bash_profile" ~/.bash_profile
+
+install-vimrc:
+	rm -f ~/.vimrc
+	ln -s "`pwd`/vimrc" ~/.vimrc
