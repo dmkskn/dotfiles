@@ -32,6 +32,12 @@ echo -n "Installing tag..." && brew install tag > /dev/null && echo " Done."
 
 
 # Cask
+echo -n "Installing Visual Studio Code.rb..." && brew cask install visual-studio-code > /dev/null && echo " Done."
+echo -n "Installing Postgres..." && brew cask install postgres > /dev/null && echo " Done."
+echo -n "Installing BitTorrent..." && brew cask install bittorrent > /dev/null && echo " Done."
+echo -n "Installing HandBrake..." && brew cask install handbrake > /dev/null && echo " Done."
+echo -n "Installing Docker..." && brew cask install docker > /dev/null && echo " Done."
+echo -n "Installing Kitematic..." && brew cask install kitematic > /dev/null && echo " Done."
 echo -n "Installing Keyboard Cleaner..." && brew cask install keyboard-cleaner > /dev/null && echo " Done."
 echo -n "Installing VLC..." && brew cask install vlc > /dev/null && echo " Done."
 echo -n "Installing IINA..." && brew cask install iina > /dev/null && echo " Done."
@@ -48,13 +54,6 @@ echo -n "Installing CheatSheet..." && brew cask install cheatsheet > /dev/null &
 echo -n "Installing Tor..." && brew cask install torbrowser > /dev/null && echo " Done."
 echo -n "Installing Punto Switcher..." && brew cask install punto-switcher > /dev/null && echo " Done."
 echo -n "Installing The Unarchiver..." && brew cask install the-unarchiver > /dev/null && echo " Done."
-
-
-# # Quick Look Plugins
-echo -n "Installing Quick Look Plugins..."
-brew cask install qlstephen > /dev/null # https://github.com/whomwah/qlstephen
-brew cask install qlvideo > /dev/null # https://github.com/Marginal/QLVideo
-echo "Done."
 
 
 # App Store
