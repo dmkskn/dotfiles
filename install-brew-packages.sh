@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "INSTALL PACKAGES WITH HOMEBREW"
-
 
 if [[ ! -f $(which brew) ]]; then
   ./install-homebrew.sh
@@ -40,7 +38,3 @@ echo -n "Installing tag..."                && brew install tag > /dev/null && ec
 # echo -n "Installing The Unarchiver..." && brew cask install the-unarchiver > /dev/null && echo " Done."
 # echo -n "Installing pgadmin4..." && brew cask install pgadmin4 > /dev/null && echo " Done."
 # echo -n "Installing Firefox..." && brew cask install firefox > /dev/null && echo " Done."
-
-
-echo "DONE."
-exit

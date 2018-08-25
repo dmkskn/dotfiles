@@ -11,3 +11,6 @@ xcode-select --install > /dev/null
 ./install-brew-packages.sh
 ./install-appstore.sh
 ./install-updates.sh
+
+echo "DONE."
+exit

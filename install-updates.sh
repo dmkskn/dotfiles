@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 
-
-echo "Installing Macos updates..."
+echo "Installing MacOS updates..."
 softwareupdate -i -a
 
 echo "Installing Homebrew updates..."
