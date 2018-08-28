@@ -8,6 +8,7 @@ fi
 
 # Packages 
 echo -n "Installing wget..."               && brew install wget > /dev/null && echo " Done."
+echo -n "Installing shellcheck..."         && brew install shellcheck > /dev/null && echo " Done."
 echo -n "Installing youtube-dl..."         && brew install youtube-dl > /dev/null && echo " Done."
 echo -n "Installing git..."                && brew install git > /dev/null && echo " Done."
 echo -n "Installing bash-completion..."    && brew install bash-completion > /dev/null && echo " Done."
