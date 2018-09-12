@@ -1,10 +1,24 @@
-" 1 tab == 4 spaces
-set expandtab
-set shiftwidth=4
+
+" DISABLE ARROW KEYS IN ESCAPE MODE
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+
+" DISABLE ARROW KEYS IN INSERT MODE
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+
+" ON PRESSING TAB, INSERT 4 SPACES
 set tabstop=4
+set shiftwidth=4
+set expandtab
 
-" Enable syntax highlighting
-syntax enable 
 
-" Set UTF-8 as standard encoding
-set encoding=utf8
+syntax enable        " ENABLE SYNTAX HIGHLIGHTING
+set number           " SHOW LINE NUMBERS
+set encoding=utf8    " SET UTF-8 AS STANDARD ENCODING
