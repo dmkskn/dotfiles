@@ -1,4 +1,4 @@
-install: install-aliases install-completions install-bashrc install-bash-profile install-vimrc
+install: install-aliases install-completions install-bashrc install-bash-profile install-vimrc install-gitconfig
 
 
 install-aliases:
@@ -20,3 +20,7 @@ install-bash-profile:
 install-vimrc:
 	rm -f ~/.vimrc
 	ln -s "`pwd`/vimrc" ~/.vimrc
+
+install-gitconfig:
+	rm -f ~/.gitconfig
+	ln -s "`pwd`/gitconfig" ~/.gitconfig

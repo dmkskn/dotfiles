@@ -1,0 +1,20 @@
+[user]
+    name = dmkskn
+    email = dmksknn@gmail.com
+    
+[core]
+    excludesfile = ~/.gitignore
+    editor=vim
+
+[alias]
+    s = status
+    ss = status -s
+    l = log
+    lo = log --oneline
+    a = add
+    c = commit
+    cm = commit -m
+    ca = commit --amend
+    cam = commit --amend -m
+    unc = reset HEAD^
+    uncommit = reset HEAD^
