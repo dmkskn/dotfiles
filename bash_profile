@@ -8,6 +8,7 @@ export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
 export PYTHONDONTWRITEBYTECODE=1
+export PYTHONSTARTUP=~/.pythonrc.py
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;

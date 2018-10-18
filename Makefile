@@ -1,4 +1,5 @@
-install: install-aliases install-completions install-bashrc install-bash-profile install-vimrc install-gitconfig
+install: install-aliases install-completions install-bashrc install-bash-profile \
+	install-vimrc install-gitconfig install-pythonrc
 
 
 install-aliases:
@@ -24,3 +25,7 @@ install-vimrc:
 install-gitconfig:
 	rm -f ~/.gitconfig
 	ln -s "`pwd`/gitconfig" ~/.gitconfig
+
+install-pythonrc:
+	rm -f ~/.pythonrc.py
+	ln -s "`pwd`/pythonrc.py" ~/.pythonrc.py
