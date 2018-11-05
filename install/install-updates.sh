@@ -2,7 +2,7 @@
 
 
 echo "Installing MacOS updates..."
-softwareupdate -i -a
+softwareupdate -i -a > /dev/null &
 
 echo "Installing Homebrew updates..."
 brew update > /dev/null
