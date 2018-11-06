@@ -18,3 +18,4 @@
     cam = commit --amend -m
     unc = reset HEAD^
     uncommit = reset HEAD^
+    

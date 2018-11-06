@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Folders
 alias h="~/"
 alias t="~/Desktop"
 alias d="${DEVELOPER}" # Write DEVELOPER in .bash_local
@@ -8,7 +9,7 @@ alias dl="${DEVELOPER}/learning"
 alias D="~/Documents"
 alias l="~/Downloads"
 
-
+# Go to ...
 alias to="cd"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -20,12 +21,13 @@ alias gd="cd ${DEVELOPER}"
 alias gdp="cd ${DEVELOPER}/projects"
 alias gdl="cd ${DEVELOPER}/learning"
 
-
+# Something to hide
 alias hide="chflags hidden"
 alias unhide="chflags nohidden"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+# Python
 alias pip="pip3"
 alias python="python3"
 alias p="python3"
