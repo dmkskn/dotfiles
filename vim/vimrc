@@ -11,6 +11,7 @@ endif
 " INITIALIZE PLUGINS
 call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 
