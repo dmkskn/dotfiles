@@ -40,6 +40,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
+" OPEN NEW SPLIT PANES TO RIGHT AND BOTTOM
+set splitbelow
+set splitright
+
+
 " ON PRESSING TAB, INSERT 4 SPACES
 set tabstop=4
 set shiftwidth=4
@@ -49,3 +54,11 @@ set expandtab
 syntax enable        " ENABLE SYNTAX HIGHLIGHTING
 set number           " SHOW LINE NUMBERS
 set encoding=utf8    " SET UTF-8 AS STANDARD ENCODING
+
+
+" AVOID SWITCHING BETWEEN KEYBOARDS, WHEN YOU NEED TO ENTER NORMAL MODE COMMAND
+:set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+
+" DISPLAY EXTRA WHITESPACE
+set list listchars=tab:»·,trail:·,nbsp:·
