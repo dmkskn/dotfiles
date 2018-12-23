@@ -12,6 +12,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tmhedberg/simpylfold'
 call plug#end()
 
 
