@@ -13,11 +13,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmhedberg/simpylfold'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 
 " RUN BLACK ON SAVE
 autocmd BufWritePre *.py execute ':Black'
+
+
+" <control + b> TO RUN BLACK
+map <C-b> :Black<CR>
 
 
 " DISABLE ARROW KEYS IN ESCAPE MODE
@@ -52,9 +57,16 @@ set shiftwidth=4
 set expandtab
 
 
-syntax enable        " ENABLE SYNTAX HIGHLIGHTING
-set number           " SHOW LINE NUMBERS
-set encoding=utf8    " SET UTF-8 AS STANDARD ENCODING
+" ENABLE SYNTAX HIGHLIGHTING
+syntax enable
+
+
+" SHOW LINE NUMBERS
+set number
+
+
+" SET UTF-8 AS STANDARD ENCODING
+set encoding=utf8
 
 
 " AVOID SWITCHING BETWEEN KEYBOARDS, WHEN YOU NEED TO ENTER NORMAL MODE COMMAND
@@ -63,3 +75,16 @@ set encoding=utf8    " SET UTF-8 AS STANDARD ENCODING
 
 " DISPLAY EXTRA WHITESPACE
 set list listchars=tab:»·,trail:·,nbsp:·
+
+
+" OPEN NERDTREE AUTOMATICALLY WHEN VIM STARTS UP ON OPENING A DIRECTORY
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+
+" CLOSE VIM IF THE ONLY WINDOW LEFT OPEN IS A NERDTREE
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" <control + n> TO OPEN NERDTREE
+map <C-n> :NERDTreeToggle<CR>
