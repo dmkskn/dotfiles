@@ -1,8 +1,5 @@
-install: install-packages install-aliases install-completions install-bashrc install-bash-profile \
-	install-vimrc install-gitconfig install-pythonrc install-vscode-settings install-macos-defaults
-
-install-packages:
-	bash packages.sh
+install: install-aliases install-completions install-bashrc install-bash-profile \
+	install-vimrc install-gitconfig install-pythonrc install-vscode-settings
 
 install-aliases:
 	rm -f ~/.aliases
@@ -36,6 +33,3 @@ install-vscode-settings:
 	bash `pwd`/vscode/install-extensions.sh
 	rm -f ~/Library/Application\ Support/Code/User/settings.json
 	ln -s `pwd`/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-
-install-macos-defaults:
-	bash `pwd`/macos.sh
