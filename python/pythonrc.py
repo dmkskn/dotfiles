@@ -1,16 +1,17 @@
-def _init():
-    import time
-    import types
-    import inspect
-    import datetime
-    import builtins
+import os
+import sys
+import time
+import datetime
+import inspect
+import collections
+import operator
 
-    pocket = types.ModuleType("pocket")
-    pocket.tt = time.time
-    pocket.dt = datetime.datetime
-    pocket.i = inspect
-    builtins.p = pocket
+try:
+    import requests
+except ImportError:
+    pass
 
-
-_init()
-del _init
+try:
+    import requests_html
+except ImportError:
+    pass

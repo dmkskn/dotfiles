@@ -1,0 +1,31 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "79"
+    ],
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "breadcrumbs.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "[python]": {
+        "editor.rulers": [
+            79,
+            72
+        ],
+    },
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.rulers": [
+            80
+        ],
+        "editor.fontSize": 14,
+        "editor.lineHeight": 25
+    }
+}

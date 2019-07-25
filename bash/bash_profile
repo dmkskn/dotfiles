@@ -19,3 +19,4 @@ shopt -s cdspell;
 source ~/.aliases
 source ~/.bashrc
 source ~/.completions
+export PATH="/usr/local/opt/ruby/bin:$PATH"

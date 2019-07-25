@@ -21,7 +21,7 @@ alias gd="cd ${DEVELOPER}"
 alias gdp="cd ${DEVELOPER}/projects"
 alias gdl="cd ${DEVELOPER}/learning"
 
-# Something to hide
+# Something to hidep
 alias hide="chflags hidden"
 alias unhide="chflags nohidden"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
