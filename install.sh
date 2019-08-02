@@ -13,14 +13,17 @@ echo "export MOVIE_DATABASE=$MOVIE_DATABASE" >> ~/.bash_local
 read -p "Install packages (y/n): " INSTALL_PACKAGES
 read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
 
-[ "$INSTALL_PACKAGES" == "y" ] && bash packages.sh
-[ "$INSTALL_MACOS_SETTINGS" == "n" ] && bash macos.sh
+[ "$INSTALL_PACKAGES" == "y" ] && bash "`pwd`/packages/packages.sh"
+[ "$INSTALL_MACOS_SETTINGS" == "n" ] && bash "`pwd`/macos/macos.sh"
 
 rm -f ~/.aliases
 ln -s "`pwd`/bash/aliases" ~/.aliases
 
 rm -f ~/.completions
 ln -s "`pwd`/bash/completions" ~/.completions
+
+rm -f ~/.functions
+ln -s "`pwd`/bash/functions" ~/.functions
 
 rm -f ~/.bashrc
 ln -s "`pwd`/bash/bashrc" ~/.bashrc

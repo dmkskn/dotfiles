@@ -1,26 +1,17 @@
 #!/usr/bin/env bash
 
-
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 export EDITOR=vim
 export HOSTS="/private/etc/hosts"
-
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
-
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP=~/.pythonrc.py
 
-
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
-
+shopt -s cdspell; # Autocorrect typos in path names when using `cd`
 
 [ -f ~/.bash_local ] && source ~/.bash_local
-source ~/.aliases
-source ~/.bashrc
-source ~/.completions
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-function gi() {
-  curl -sL "https://www.gitignore.io/api/$1";
-}
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.bashrc ] && source ~/.bashrc
+[ -f ~/.completions ] && source ~/.completions
+[ -f ~/.functions ] && source ~/.functions
