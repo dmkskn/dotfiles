@@ -63,9 +63,12 @@ pip-install ptpython
 pip-install requests
 pip-install requests-html
 pip-install polka
+pip-install polka-curses
 pip-install isle
 pip-install black
 pip-install pylint
+pip-install film
+pip-install movie-review
 
 
 # Packages
