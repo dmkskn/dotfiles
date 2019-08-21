@@ -79,6 +79,7 @@ brew-install youtube-dl
 brew-install tag
 brew-install tmux
 brew-install googler
+brew-install tree
 
 # AppStore
 mas-install 747648890 "Telegram"
