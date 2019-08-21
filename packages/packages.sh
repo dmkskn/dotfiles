@@ -99,6 +99,7 @@ brew-cask-install appcleaner
 brew-cask-install clipy
 brew-cask-install keyboard-cleaner
 brew-cask-install keepingyouawake
+brew-cask-install github
 brew-cask-install writefull
 brew-cask-install webtorrent
 brew-cask-install transmission
