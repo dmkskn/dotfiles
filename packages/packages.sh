@@ -101,6 +101,7 @@ brew-cask-install keyboard-cleaner
 brew-cask-install keepingyouawake
 brew-cask-install writefull
 brew-cask-install webtorrent
+brew-cask-install transmission
 brew-cask-install figma
 brew-cask-install calibre
 brew-cask-install postgres
