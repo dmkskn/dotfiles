@@ -96,6 +96,7 @@ brew-cask-install anki
 brew-cask-install selfcontrol
 brew-cask-install punto-switcher
 brew-cask-install appcleaner
+brew-cask-install clipy
 brew-cask-install keyboard-cleaner
 brew-cask-install keepingyouawake
 brew-cask-install writefull
