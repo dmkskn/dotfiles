@@ -29,6 +29,14 @@ function pip-install {
     fi
 }
 
+function pipx-install {
+    if ! /usr/local/bin/pipx list | grep "package $1" &> /dev/null; then
+        /usr/local/bin/pipx install $1 &> /dev/null && /usr/local/bin/pipx list | grep "package $1" &> /dev/null && echo "[pipx] $1 was installed 👍" || echo "[pipx] $1 was not installed ❌"
+        else
+        echo "[pipx] $1 already installed 👌"
+    fi
+}
+
 
 function mas-install {
     if ! mas list | grep -q $1; then
@@ -59,16 +67,21 @@ brew-cask-install iterm2
 brew-cask-install visual-studio-code
 
 # PyPi
-pip-install ptpython
+pip-install pipx
 pip-install requests
 pip-install requests-html
 pip-install polka
 pip-install polka-curses
 pip-install isle
-pip-install black
-pip-install pylint
 pip-install film
 pip-install movie-review
+
+
+pipx-install black
+pipx-install pipenv
+pipx-install poetry
+pipx-install ptpython
+pipx-install pylint
 
 
 # Packages

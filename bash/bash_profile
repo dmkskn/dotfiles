@@ -15,3 +15,5 @@ shopt -s cdspell; # Autocorrect typos in path names when using `cd`
 [ -f ~/.bashrc ] && source ~/.bashrc
 [ -f ~/.completions ] && source ~/.completions
 [ -f ~/.functions ] && source ~/.functions
+
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
