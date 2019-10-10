@@ -73,6 +73,7 @@ brew-install node
 brew-install mas
 brew-cask-install iterm2
 brew-cask-install visual-studio-code
+brew-cask-install travis
 
 # PyPi
 pip-install pipx
