@@ -34,11 +34,12 @@ rm -f ~/.pythonrc.py
 ln -s "`pwd`/python/pythonrc.py" ~/.pythonrc.py
 
 bash `pwd`/vscode/install-extensions.sh
+
 rm -f ~/Library/Application\ Support/Code/User/settings.json
 ln -s `pwd`/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
-rm -f ~/Library/Application\ Support/Code/User/snippets/django-snippets.code-snippets
-ln -s `pwd`/vscode/snippets/django-snippets.code-snippets ~/Library/Application\ Support/Code/User/snippets/django-snippets.code-snippets
+rm -rf ~/Library/Application\ Support/Code/User/snippets
+ln -s `pwd`/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 
 read -p "Install packages (y/n): " INSTALL_PACKAGES
 read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
