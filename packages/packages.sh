@@ -24,7 +24,7 @@ function brew-cask-install {
 function pip-install {
     if ! /usr/local/bin/pip3 list | grep $1 &> /dev/null; then
         /usr/local/bin/pip3 install -q $1 &> /dev/null && /usr/local/bin/pip3 list | grep $1 &> /dev/null && echo "[pip] $1 was installed 👍" || echo "[pip] $1 was not installed ❌"
-        else
+    else
         echo "[pip] $1 already installed 👌"
     fi
 }
@@ -32,7 +32,7 @@ function pip-install {
 function pipx-install {
     if ! /usr/local/bin/pipx list | grep "package $1" &> /dev/null; then
         /usr/local/bin/pipx install $1 &> /dev/null && /usr/local/bin/pipx list | grep "package $1" &> /dev/null && echo "[pipx] $1 was installed 👍" || echo "[pipx] $1 was not installed ❌"
-        else
+    else
         echo "[pipx] $1 already installed 👌"
     fi
 }
@@ -41,11 +41,18 @@ function pipx-install {
 function mas-install {
     if ! mas list | grep -q $1; then
         mas install $1 &> /dev/null && mas list | grep -q "$1" && echo "[mas] $2 was installed 👍" || echo "[mas] $2 was not installed ❌"
-        else
+    else
         echo "[mas] $2 already installed "
     fi
 }
 
+function npm-install {
+    if ! /usr/local/bin/npm list -g | grep $1 &> /dev/null; then
+        /usr/local/bin/npm install -g $1 &> /dev/null && /usr/local/bin/npm list -g | grep $1 &> /dev/null && echo "[npm] $1 was installed 👍" || echo "[npm] $1 was not installed ❌"
+    else
+        echo "[npm] $1 already installed 👌"
+    fi
+}
 
 echo -n "Installing Xcode Command Line Tools... " && xcode-select --install &> /dev/null && echo "Done." || echo "Error (probably already installed)"
 
@@ -62,6 +69,7 @@ fi
 
 # Essentials
 brew-install python
+brew-install node
 brew-install mas
 brew-cask-install iterm2
 brew-cask-install visual-studio-code
@@ -83,6 +91,9 @@ pipx-install poetry
 pipx-install ptpython
 pipx-install pylint
 
+# NPM
+npm-install gulp
+npm-install netlify-cli
 
 # Packages
 brew-install git
