@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+# .zprofile is equivalent to .bash_profile and runs at login, including over SSH
+
+[ -f ~/.profile ] && source ~/.profile
+[ -f ~/.zshrc ] && source ~/.zshrc
+

@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# .zshrc is equivalent to .bashrc and runs for each new Terminal session
+
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.functions ] && source ~/.functions

@@ -18,6 +18,12 @@ ln -s "`pwd`/bash/bashrc" ~/.bashrc
 rm -f ~/.bash_profile
 ln -s "`pwd`/bash/bash_profile" ~/.bash_profile
 
+rm -f ~/.zshrc
+ln -s "`pwd`/zsh/zshrc" ~/.zshrc
+
+rm -f ~/.zprofile
+ln -s "`pwd`/zsh/zprofile" ~/.zprofile
+
 rm -f ~/.vimrc
 ln -s "`pwd`/vim/vimrc" ~/.vimrc
 
