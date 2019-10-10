@@ -1,25 +1,18 @@
 #!/usr/bin/env bash
 
 # Folders
-alias h="~/"
-alias t="~/Desktop"
-alias d="${DEVELOPER}" # Write DEVELOPER in .bash_local
-alias dp="${DEVELOPER}/projects"
-alias dl="${DEVELOPER}/learning"
-alias D="~/Documents"
-alias l="~/Downloads"
+alias home="~/"
+alias desktop="~/Desktop"
+alias developer="${DEVELOPER}" # Write DEVELOPER in .bash_local
+alias projects="${DEVELOPER}/projects"
+alias learning="${DEVELOPER}/learning"
+alias documents="~/Documents"
+alias downloads="~/Downloads"
 
 # Go to ...
 alias to="cd"
 alias ..="cd .."
 alias ...="cd ../.."
-alias gh="cd ~"
-alias gt="cd ~/Desktop"
-alias gD="cd ~/Documents"
-alias gl="cd ~/Downloads"
-alias gd="cd ${DEVELOPER}"
-alias gdp="cd ${DEVELOPER}/projects"
-alias gdl="cd ${DEVELOPER}/learning"
 
 # Something to hidep
 alias hide="chflags hidden"
