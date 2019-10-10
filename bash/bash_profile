@@ -1,19 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export EDITOR=vim
-export HOSTS="/private/etc/hosts"
-export LC_ALL=en_US.utf-8
-export LANG=en_US.utf-8
-export PYTHONDONTWRITEBYTECODE=1
-export PYTHONSTARTUP=~/.pythonrc.py
+# runs at login
 
-shopt -s cdspell; # Autocorrect typos in path names when using `cd`
-
-[ -f ~/.bash_local ] && source ~/.bash_local
-[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.profile ] && source ~/.profile
 [ -f ~/.bashrc ] && source ~/.bashrc
-[ -f ~/.completions ] && source ~/.completions
-[ -f ~/.functions ] && source ~/.functions
-
-export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"

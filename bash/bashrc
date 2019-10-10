@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# runs for each new Terminal session
+
 BLACK="\[\033[0;30m\]"
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[1;33m\]"
@@ -67,5 +69,7 @@ ${START_SIGN}${WORKDIR}${PYTHON_VIRTUALENV}${GIT_BRANCH}${ERROR_MESSAGE}${COLOR_
 
 PROMPT_COMMAND=set_bash_prompt
 
-# The next line updates PATH for Netlify's Git Credential Helper.
-if [ -f '/Users/home/.netlify/helper/path.bash.inc' ]; then source '/Users/home/.netlify/helper/path.bash.inc'; fi
+
+[ -f ~/.bash_local ] && source ~/.bash_local
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.functions ] && source ~/.functions

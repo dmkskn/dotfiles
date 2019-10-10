@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# runs at login
+
+export EDITOR=vim
+export HOSTS="/private/etc/hosts"
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONSTARTUP=~/.pythonrc.py

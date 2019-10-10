@@ -15,6 +15,9 @@ read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
 [ "$INSTALL_PACKAGES" == "y" ] && bash "`pwd`/packages/packages.sh"
 [ "$INSTALL_MACOS_SETTINGS" == "n" ] && bash "`pwd`/macos/macos.sh"
 
+rm -f ~/.profile
+ln -s "`pwd`/sh/profile" ~/.profile
+
 rm -f ~/.aliases
 ln -s "`pwd`/bash/aliases" ~/.aliases
 
