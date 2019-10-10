@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+[ -e ~/Documents/.ssh ] && ln -s ~/Documents/.ssh ~/.ssh &> /dev/null || echo "👉 ~/.ssh already exists. "
+
 rm -f ~/.bash_local
-[ -f ~/Documents/.bash_local ] && ln -s ~/Documents/.bash_local ~/.bash_local || touch ~/.bash_local
+[ -f ~/Documents/.bash_local ] && ln -s ~/Documents/.bash_local ~/.bash_local &> /dev/null || touch ~/.bash_local
 
 rm -f ~/.profile
 ln -s "`pwd`/sh/profile" ~/.profile
