@@ -18,9 +18,6 @@ read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
 rm -f ~/.aliases
 ln -s "`pwd`/bash/aliases" ~/.aliases
 
-rm -f ~/.completions
-ln -s "`pwd`/bash/completions" ~/.completions
-
 rm -f ~/.functions
 ln -s "`pwd`/bash/functions" ~/.functions
 
