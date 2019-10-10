@@ -18,6 +18,7 @@
             79,
             72
         ],
+        "editor.defaultFormatter": "ms-python.python",
     },
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
@@ -29,6 +30,9 @@
         "editor.lineHeight": 25
     },
     "[html]": {
-        "editor.lineHeight": 28,
-    }
+        "editor.lineHeight": 35,
+    },
+    "eslint.run": "onSave",
+    "window.zoomLevel": 0,
+    "html.format.endWithNewline": true
 }
