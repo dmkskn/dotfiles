@@ -95,6 +95,7 @@ pipx-install pylint
 # NPM
 npm-install gulp
 npm-install netlify-cli
+npm-install now
 
 # Packages
 brew-install git
@@ -105,6 +106,7 @@ brew-install tag
 brew-install tmux
 brew-install googler
 brew-install tree
+brew-install imagemagick
 
 # AppStore
 mas-install 747648890 "Telegram"
@@ -132,5 +134,7 @@ brew-cask-install figma
 brew-cask-install calibre
 brew-cask-install postgres
 brew-cask-install cocoapods
+brew-cask-install imageoptim
+brew-cask-install imagealpha
 
 exit 0
