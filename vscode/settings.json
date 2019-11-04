@@ -34,5 +34,7 @@
     },
     "eslint.run": "onSave",
     "window.zoomLevel": 0,
-    "html.format.endWithNewline": true
+    "html.format.endWithNewline": true,
+    "html-css-class-completion.enableEmmetSupport": true,
+    "html.format.wrapLineLength": 300
 }

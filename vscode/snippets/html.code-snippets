@@ -1,0 +1,108 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Prints meta for Apple Mobile Web Application": {
+		"scope": "html",
+		"prefix": "meta:apple-mobile-web-app",
+		"body": [
+			"<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">",
+			"<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"$1\" />"
+		]
+	},
+	"Prints links for Apple": {
+		"scope": "html",
+		"prefix": "link:apple-icons",
+		"body": [
+			"<link href=\"/apple-touch-icon-76x76.png\" sizes=\"76x76\" rel=\"apple-touch-icon\">",
+			"<link href=\"/apple-touch-icon-120x120.png\" sizes=\"120x120\" rel=\"apple-touch-icon\">",
+			"<link href=\"/apple-touch-icon-152x152.png\" sizes=\"152x152\" rel=\"apple-touch-icon\">",
+			"<link href=\"/apple-touch-icon-180x180.png\" sizes=\"180x180\" rel=\"apple-touch-icon\">"
+		]
+	},
+	"Prints meta for Twitter": {
+		"scope": "html",
+		"prefix": "link:twitter",
+		"body": [
+			"<meta name=\"twitter:image\" content=\"$1\">",
+			"<meta name=\"twitter:card\" content=\"summary_large_image\">",
+			"<meta name=\"twitter:title\" content=\"$2\">",
+			"<meta name=\"twitter:description\" content=\"$3\">"
+		]
+	},
+	"Prints meta for Open Graph": {
+		"scope": "html",
+		"prefix": "link:og",
+		"body": [
+			"<meta property=\"og:url\" content=\"$1\">",
+			"<meta property=\"og:type\" content=\"website\">",
+			"<meta property=\"og:title\" content=\"$2\">",
+			"<meta property=\"og:image\" content=\"$3\">",
+			"<meta property=\"og:image:width\" content=\"1200\">",
+			"<meta property=\"og:image:height\" content=\"630\">",
+			"<meta property=\"og:description\" content=\"$4\">",
+			"<meta property=\"og:site_name\" content=\"$5\">",
+			"<meta property=\"og:locale\" content=\"$6\">"
+		]
+	},
+	"Prints meta with information about author": {
+		"scope": "html",
+		"prefix": "meta:author",
+		"body": [
+			"<meta name=\"author\" content=\"$1\">"
+		]
+	},
+	"Prints meta with information about copyright": {
+		"scope": "html",
+		"prefix": "meta:copyright",
+		"body": [
+			"<meta name=\"copyright\" content=\"$1\">"
+		]
+	},
+	"Prints meta with website description": {
+		"scope": "html",
+		"prefix": "meta:description",
+		"body": [
+			"<meta name=\"description\" content=\"$1\">"
+		]
+	},
+	"Prints meta with keywords": {
+		"scope": "html",
+		"prefix": "meta:keywords",
+		"body": [
+			"<meta name=\"keywords\" content=\"$1\">"
+		]
+	},
+	"Prints favicons": {
+		"scope": "html",
+		"prefix": "favicons",
+		"body": [
+			"<link href=\"/apple-touch-icon-76x76.png\" sizes=\"76x76\" rel=\"apple-touch-icon\">",
+			"<link href=\"/apple-touch-icon-120x120.png\" sizes=\"120x120\" rel=\"apple-touch-icon\">",
+			"<link href=\"/apple-touch-icon-152x152.png\" sizes=\"152x152\" rel=\"apple-touch-icon\">",
+			"<link href=\"/apple-touch-icon-180x180.png\" sizes=\"180x180\" rel=\"apple-touch-icon\">",
+			"<link type=\"image/png\" href=\"/favicon-64.png\" rel=\"icon\" sizes=\"64x64\">",
+			"<link type=\"image/png\" href=\"/favicon-32.png\" rel=\"icon\" sizes=\"32x32\">",
+			"<link type=\"image/png\" href=\"/favicon-16.png\" rel=\"icon\" sizes=\"16x16\">",
+			"<link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg\" color=\"#ffffff\">",
+			"<link rel=\"manifest\" href=\"/site.webmanifest\">",
+			"<link rel=\"shortcut icon\" href=\"/favicon.ico\">",
+			"<meta name=\"msapplication-TileColor\" content=\"#ffffff\">",
+			"<meta name=\"msapplication-config\" content=\"/browserconfig.xml\">",
+			"<meta name=\"theme-color\" content=\"#ffffff\">"
+		]
+	}
+}

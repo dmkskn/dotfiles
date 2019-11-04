@@ -17,7 +17,7 @@
 	// }
 	"Visually Hidden": {
 		"scope": "css",
-		"prefix": "css-visually-hidden",
+		"prefix": ".visually-hidden",
 		"body": [
 			".visually-hidden:not(:focus):not(:active) {",
 			"    position: absolute;",
@@ -32,5 +32,39 @@
 			"}",
 		],
 		"description": "Writes visually-hidden class"
-	}
+	},
+	"Selection Color": {
+		"scope": "css",
+		"prefix": "::selection",
+		"body": [
+			"::selection {",
+			"    background-color: $1;",
+			"    color: $2;",
+			"}",
+			"$0"
+		],
+		"description": "Change Text Selection Color"
+	},
+	"Not Visited Link": {
+		"scope": "css",
+		"prefix": "a:link",
+		"body": [
+			"a:link {",
+			"    $1",
+			"}",
+			"$0"
+		],
+		"description": "Writes not visited Link"
+	},
+	"Visited Link": {
+		"scope": "css",
+		"prefix": "a:visited",
+		"body": [
+			"a:visited {",
+			"    $1",
+			"}",
+			"$0"
+		],
+		"description": "Writes already visited link"
+	},
 }
