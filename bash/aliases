@@ -19,10 +19,6 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # Python
-alias pip="pip3"
-alias python="python3"
-alias p="python3"
-alias pp="ptpython"
 alias cv="python3 -m venv venv"
 alias av="source venv/bin/activate"
 alias dv="deactivate"
