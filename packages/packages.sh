@@ -73,7 +73,7 @@ brew-install node
 brew-install mas
 brew-cask-install iterm2
 brew-cask-install visual-studio-code
-brew-cask-install travis
+brew-install travis
 
 # PyPi
 pip-install pipx
@@ -84,12 +84,12 @@ pip-install polka-curses
 pip-install isle
 pip-install film
 pip-install movie-review
+pip-install ptpython
 
 
 pipx-install black
 pipx-install pipenv
 pipx-install poetry
-pipx-install ptpython
 pipx-install pylint
 
 # NPM
@@ -116,6 +116,8 @@ mas-install 425424353 "The Unarchiver"
 mas-install 1335413823 "Ka-Block!"
 mas-install 1188020834 "OverPicture"
 mas-install 497799835 "XCode"
+mas-install 409201541 "Pages"
+mas-install 408981434 "iMovie"
 
 # # Applications
 brew-cask-install iina
@@ -136,5 +138,8 @@ brew-cask-install postgres
 brew-cask-install cocoapods
 brew-cask-install imageoptim
 brew-cask-install imagealpha
+brew-cask-install webponize
+brew-cask-install google-chrome
+brew-cask-install firefox
 
 exit 0
