@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+read -p "Install packages (y/n): " INSTALL_PACKAGES
+read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
+
+[ "$INSTALL_PACKAGES" == "y" ] && bash "`pwd`/packages/packages.sh"
+[ "$INSTALL_MACOS_SETTINGS" == "n" ] && bash "`pwd`/macos/macos.sh"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 [ -e ~/Documents/.ssh ] && ln -s ~/Documents/.ssh ~/.ssh &> /dev/null || echo "👉 ~/.ssh already exists. "
 
 rm -f ~/.bash_local
@@ -42,9 +50,3 @@ ln -s `pwd`/vscode/settings.json ~/Library/Application\ Support/Code/User/settin
 
 rm -rf ~/Library/Application\ Support/Code/User/snippets
 ln -s `pwd`/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
-
-read -p "Install packages (y/n): " INSTALL_PACKAGES
-read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
-
-[ "$INSTALL_PACKAGES" == "y" ] && bash "`pwd`/packages/packages.sh"
-[ "$INSTALL_MACOS_SETTINGS" == "n" ] && bash "`pwd`/macos/macos.sh"
