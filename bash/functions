@@ -1,5 +1,23 @@
 #!/usr/bin/env bash
 
-function gi() {
-  curl -sL "https://www.gitignore.io/api/$1";
+function gi {
+  curl -sL "https://www.gitignore.io/api/$1"
+}
+
+function pip-install-save {
+    pip install $1 && pip freeze | grep $1 >> requirements.txt
+}
+
+
+function pip-install-save-dev {
+    pip install $1 && pip freeze | grep $1 >> requirements_dev.txt
+}
+
+function nfiles {
+  echo -e "$(ls $1 | wc -l)" | sed 's/^[ \t]*//;s/[ \t]*$//'
+}
+
+function mkcd {
+  mkdir -p $1
+  cd $1
 }
