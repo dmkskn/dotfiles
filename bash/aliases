@@ -27,3 +27,5 @@ alias dv="deactivate"
 alias path='echo -e ${PATH//:/\\n}'
 
 
+alias hs='history | grep'
+
