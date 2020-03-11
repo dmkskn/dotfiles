@@ -69,6 +69,7 @@ fi
 
 # Essentials
 brew-install python
+brew-install pyenv
 brew-install node
 brew-install mas
 brew-cask-install iterm2
