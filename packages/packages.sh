@@ -99,6 +99,7 @@ npm-install now
 
 # Packages
 brew-install git
+brew-install git-lfs
 brew-install vim
 brew-install wget
 brew-install youtube-dl
