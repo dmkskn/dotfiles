@@ -11,3 +11,7 @@ export PYTHONSTARTUP=~/.pythonrc.py
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
+
+
+# added by travis gem
+[ -f /Users/home/.travis/travis.sh ] && source /Users/home/.travis/travis.sh

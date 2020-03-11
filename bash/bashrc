@@ -77,9 +77,3 @@ PROMPT_COMMAND=set_bash_prompt
 [ -f ~/.aliases ] && source ~/.aliases
 
 [ -f ~/.functions ] && source ~/.functions
-
-
-# added by travis gem
-[ -f /Users/home/.travis/travis.sh ] && source /Users/home/.travis/travis.sh
-
-
