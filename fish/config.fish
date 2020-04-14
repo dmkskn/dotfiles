@@ -14,3 +14,6 @@ set -gx EDITOR "code -w"
 for f in ~/.config/fish/prompt/*.fish
     source $f
 end
+
+# pyenv init
+status --is-interactive; and source (pyenv init -|psub)
