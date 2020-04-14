@@ -122,6 +122,7 @@ mas-install 409201541 "Pages"
 mas-install 408981434 "iMovie"
 
 # # Applications
+brew-cask-install maccy
 brew-cask-install iina
 brew-cask-install anki
 brew-cask-install selfcontrol

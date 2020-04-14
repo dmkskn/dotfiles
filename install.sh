@@ -31,6 +31,21 @@ ln -s "`pwd`/bash/bash_profile" ~/.bash_profile
 rm -f ~/.zshrc
 ln -s "`pwd`/zsh/zshrc" ~/.zshrc
 
+rm -f ~/.config/fish/config.fish
+ln -s "`pwd`/fish/config.fish" ~/.config/fish/config.fish
+
+rm -rf ~/.config/fish/functions
+mkdir ~/.config/fish/functions
+for f in $(ls `pwd`/fish/functions/); do
+    ln -s "`pwd`/fish/functions/$(basename $f)" "$HOME/.config/fish/functions/$(basename $f)"
+done
+
+rm -rf ~/.config/fish/prompt
+mkdir ~/.config/fish/prompt
+for f in $(ls `pwd`/fish/prompt/); do
+    ln -s "`pwd`/fish/prompt/$(basename $f)" "$HOME/.config/fish/prompt/$(basename $f)"
+done
+
 rm -f ~/.zprofile
 ln -s "`pwd`/zsh/zprofile" ~/.zprofile
 

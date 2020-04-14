@@ -1,0 +1,1 @@
+/Users/home/.config/fish/functions/gi.fish
