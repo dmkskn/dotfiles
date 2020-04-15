@@ -41,4 +41,5 @@
     "less.validate": false,
     "scss.validate": false,
     "stylelint.enable": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
 }
