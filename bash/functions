@@ -8,7 +8,6 @@ function pip-install-save {
     pip install $1 && pip freeze | grep $1 >> requirements.txt
 }
 
-
 function pip-install-save-dev {
     pip install $1 && pip freeze | grep $1 >> requirements_dev.txt
 }
