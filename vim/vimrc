@@ -2,27 +2,17 @@
 
 " DOWNLOAD PLUG.VIM AND PUT IT IN THE `AUTOLOAD` DIRECTORY
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source '~/.vimrc'
 endif
 
 
 " INITIALIZE PLUGINS
 call plug#begin('~/.vim/plugged')
-Plug 'ambv/black'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmhedberg/simpylfold'
 Plug 'scrooloose/nerdtree'
 call plug#end()
-
-
-" RUN BLACK ON SAVE
-autocmd BufWritePre *.py execute ':Black'
-
-
-" <control + b> TO RUN BLACK
-map <C-b> :Black<CR>
 
 
 " DISABLE ARROW KEYS IN ESCAPE MODE
