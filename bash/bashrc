@@ -70,10 +70,10 @@ ${START_SIGN}${WORKDIR}${PYTHON_VIRTUALENV}${GIT_BRANCH}${ERROR_MESSAGE}${COLOR_
 PROMPT_COMMAND=set_bash_prompt
 
 
-[ -f ~/.profile ] && source ~/.profile
-
 [ -f ~/.bash_local ] && source ~/.bash_local
 
 [ -f ~/.aliases ] && source ~/.aliases
 
 [ -f ~/.functions ] && source ~/.functions
+
+[ -f ~/.profile ] && source ~/.profile
