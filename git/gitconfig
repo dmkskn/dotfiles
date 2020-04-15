@@ -1,10 +1,10 @@
 [user]
 	name = dmkskn
 	email = dmksknn@gmail.com
-    
+
 [core]
     excludesfile = ~/.gitignore
-    editor=vim
+	editor = code -n -w
 
 [alias]
     s = status
@@ -18,7 +18,7 @@
     cam = commit --amend -m
     unc = reset HEAD^
     uncommit = reset HEAD^
-    
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
