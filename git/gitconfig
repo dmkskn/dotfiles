@@ -10,21 +10,5 @@
     s = status
     ss = status -s
     l = log
-    lo = log --oneline
-    a = add
-    c = commit
-    cm = commit -m
-    ca = commit --amend
-    cam = commit --amend -m
-    unc = reset HEAD^
+    ll = log --oneline
     uncommit = reset HEAD^
-
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-
-# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
-[include]
-  path = /Users/home/.netlify/helper/git-config

@@ -7,8 +7,8 @@ set -x LC_ALL en_US.UTF-8
 # Don't write .pyc files
 set -x PYTHONDONTWRITEBYTECODE 1
 
-# Set Visual Studio Code as the default editor
-set -gx EDITOR "code -w"
+# Set vim as the default editor
+set -gx EDITOR vim
 
 # Load my prompt settings
 for f in ~/.config/fish/prompt/*.fish
@@ -16,4 +16,7 @@ for f in ~/.config/fish/prompt/*.fish
 end
 
 # pyenv init
-status --is-interactive; and source (pyenv init -|psub)
+source ~/.config/fish/pyenvstartup.fish
+
+# pipx virtual enviroment location
+set fish_user_paths /Users/home/.local/bin $fish_user_paths

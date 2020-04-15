@@ -91,7 +91,7 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.twoFingerDoubleTap
 # LANGUAGE & REGION SETTINGS
 
 # Language & Region settings > Preferred languages: Russian (Primary) and English
-defaults write NSGlobalDomain AppleLanguages -array "ru" "en" 
+defaults write NSGlobalDomain AppleLanguages -array "ru" "en"
 
 # Language & Region settings > Region
 defaults write NSGlobalDomain AppleLocale -string "ru_RU"

@@ -1,18 +1,10 @@
 #!/usr/bin/env bash
 
 # Go to ...
-alias to="cd"
 alias ..="cd .."
 alias ...="cd ../.."
-alias home="cd ~/"
-alias desktop="cd ~/Desktop"
-alias developer="cd ${DEVELOPER}" # Write DEVELOPER in .bash_local
-alias projects="cd ${DEVELOPER}/projects"
-alias learning="cd ${DEVELOPER}/learning"
-alias downloads="cd ~/Downloads"
-alias documents="cd ~/Documents"
 
-# Something to hidep
+# Something to hide
 alias hide="chflags hidden"
 alias unhide="chflags nohidden"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -25,7 +17,4 @@ alias dv="deactivate"
 
 # Print each path on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
-
-alias hs='history | grep'
 
