@@ -6,8 +6,6 @@ read -p "Install macOS settings (y/n): " INSTALL_MACOS_SETTINGS
 [ "$INSTALL_PACKAGES" == "y" ] && bash "`pwd`/packages/packages.sh"
 [ "$INSTALL_MACOS_SETTINGS" == "n" ] && bash "`pwd`/macos/macos.sh"
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 [ -e ~/Documents/.ssh ] && ln -s ~/Documents/.ssh ~/.ssh &> /dev/null || echo "👉 ~/.ssh already exists. "
 
 rm -f ~/.bash_local
@@ -28,9 +26,6 @@ ln -s "`pwd`/bash/bashrc" ~/.bashrc
 rm -f ~/.bash_profile
 ln -s "`pwd`/bash/bash_profile" ~/.bash_profile
 
-rm -f ~/.zshrc
-ln -s "`pwd`/zsh/zshrc" ~/.zshrc
-
 rm -f ~/.config/fish/config.fish
 ln -s "`pwd`/fish/config.fish" ~/.config/fish/config.fish
 
@@ -45,12 +40,6 @@ mkdir ~/.config/fish/prompt
 for f in $(ls `pwd`/fish/prompt/); do
     ln -s "`pwd`/fish/prompt/$(basename $f)" "$HOME/.config/fish/prompt/$(basename $f)"
 done
-
-rm -f ~/.zprofile
-ln -s "`pwd`/zsh/zprofile" ~/.zprofile
-
-rm -f ~/.vimrc
-ln -s "`pwd`/vim/vimrc" ~/.vimrc
 
 rm -f ~/.gitconfig
 ln -s "`pwd`/git/gitconfig" ~/.gitconfig
