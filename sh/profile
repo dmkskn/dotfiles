@@ -4,14 +4,16 @@
 
 export EDITOR=vim
 export LC_ALL=en_US.utf-8
-export LANG=en_US.utf-8
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP=~/.pythonrc.py
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
+export PATH="/Users/home/.local/bin:$PATH"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"
 
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
 
-# added by travis gem
-[ -f /Users/home/.travis/travis.sh ] && source /Users/home/.travis/travis.sh
