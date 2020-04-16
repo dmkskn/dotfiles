@@ -71,6 +71,7 @@ fi
 # Install the main things
 # -----------------------
 brew install fish
+brew install httpie
 
 brew-install pyenv
 brew-install node
