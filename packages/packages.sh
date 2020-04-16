@@ -70,6 +70,8 @@ fi
 
 # Install the main things
 # -----------------------
+brew install fish
+
 brew-install pyenv
 brew-install node
 
