@@ -5,13 +5,8 @@ fish:
 	mkdir ~/.config/fish/
 
 	ln -s "`pwd`/fish/config.fish" ~/.config/fish/config.fish
-	ln -s "`pwd`/fish/pyenvstartup.fish" ~/.config/fish/pyenvstartup.fish
-
-	mkdir ~/.config/fish/functions
-	find "`pwd`/fish/functions" -name '*.fish' -exec ln -s {} ~/.config/fish/functions \;
-
-	mkdir ~/.config/fish/prompt
-	find "`pwd`/fish/prompt" -name '*.fish' -exec ln -s {} ~/.config/fish/prompt \;
+	ln -s "`pwd`/fish/conf.d" ~/.config/fish/conf.d
+	ln -s "`pwd`/fish/functions" ~/.config/fish/functions
 
 	cat /etc/shells | grep /usr/local/bin/fish > /dev/null || echo /usr/local/bin/fish | sudo tee -a /etc/shells
 	chsh -s /usr/local/bin/fish
