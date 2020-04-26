@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Solarized Light",
+    "workbench.colorTheme": "Solarized Dark",
     "workbench.statusBar.feedback.visible": false,
     "workbench.startupEditor": "newUntitledFile",
     "python.formatting.provider": "black",
@@ -42,4 +42,7 @@
     "scss.validate": false,
     "stylelint.enable": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
 }
