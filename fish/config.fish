@@ -12,3 +12,6 @@ set -gx EDITOR vim
 
 # Pipx virtual enviroment location
 set fish_user_paths /Users/home/.local/bin $fish_user_paths
+
+# Poetry
+set fish_user_paths /Users/home/.poetry/bin $fish_user_paths
