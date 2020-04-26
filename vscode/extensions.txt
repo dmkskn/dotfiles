@@ -1,0 +1,7 @@
+bmalehorn.vscode-fish
+dnicolson.binary-plist
+EditorConfig.EditorConfig
+ms-python.python
+redhat.vscode-yaml
+rubbersheep.gi
+VisualStudioExptTeam.vscodeintellicode
