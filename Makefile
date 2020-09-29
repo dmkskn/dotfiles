@@ -1,4 +1,4 @@
-all: fish sh bash vim git vscode python macos packages
+all: fish sh bash vim git vscode python macos
 
 fish:
 	rm -rf ~/.config/fish/
@@ -62,8 +62,4 @@ macos:
 	bash macos/macos.sh
 
 
-packages:
-	bash packages/packages.sh
-
-
-.PHONY: fish sh bash vim git vscode python macos packages
+.PHONY: fish sh bash vim git vscode python macos
