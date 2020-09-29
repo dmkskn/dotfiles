@@ -1,4 +1,7 @@
-all: fish sh bash vim git vscode python macos
+all: init fish sh bash vim git vscode python macos
+
+init:
+	bash init.sh
 
 fish:
 	rm -rf ~/.config/fish/
@@ -62,4 +65,4 @@ macos:
 	bash macos/macos.sh
 
 
-.PHONY: fish sh bash vim git vscode python macos
+.PHONY: init fish sh bash vim git vscode python macos
