@@ -1,7 +1,4 @@
-all: init fish sh bash vim git vscode python macos
-
-init:
-	bash init.sh
+all: fish sh bash vim git vscode python macos
 
 fish:
 	rm -rf ~/.config/fish/
@@ -11,8 +8,8 @@ fish:
 	ln -s "`pwd`/fish/conf.d" ~/.config/fish/conf.d
 	ln -s "`pwd`/fish/functions" ~/.config/fish/functions
 
-	cat /etc/shells | grep /usr/local/bin/fish > /dev/null || echo /usr/local/bin/fish | sudo tee -a /etc/shells
-	chsh -s /usr/local/bin/fish
+	cat /etc/shells | grep fish > /dev/null || echo $(shell which fish) | sudo tee -a /etc/shells
+	chsh -s $(shell which fish)
 
 sh:
 	rm -f ~/.profile
@@ -54,7 +51,6 @@ vscode:
 		ln -s `pwd`/vscode/snippets ~/Library/Application\ Support/Code/User/snippets;\
 	fi
 
-
 python:
 	rm -f ~/.pythonstartup.py
 
@@ -62,7 +58,9 @@ python:
 
 
 macos:
+ifeq ($(shell uname), Darwin)
 	bash macos/macos.sh
+endif
 
 
-.PHONY: init fish sh bash vim git vscode python macos
+.PHONY: fish sh bash vim git vscode python macos
