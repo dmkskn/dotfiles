@@ -43,19 +43,17 @@ git:
 	ln -s "`pwd`/git/gitconfig" ~/.gitconfig
 
 vscode:
-	if [ -e /Applications/Visual\ Studio\ Code.app ]; then\
-		bash `pwd`/vscode/install-extensions.sh;\
-		rm -f ~/Library/Application\ Support/Code/User/settings.json;\
-		ln -s `pwd`/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json;\
-		rm -rf ~/Library/Application\ Support/Code/User/snippets;\
-		ln -s `pwd`/vscode/snippets ~/Library/Application\ Support/Code/User/snippets;\
-	fi
+ifneq ("$(wildcard /Applications/Visual\ Studio\ Code.app)", "")
+	bash `pwd`/vscode/install-extensions.sh
+	rm -f $(HOME)/Library/Application\ Support/Code/User/settings.json
+	ln -s `pwd`/vscode/settings.json $(HOME)/Library/Application\ Support/Code/User/settings.json
+	rm -rf $(HOME)/Library/Application\ Support/Code/User/snippets
+	ln -s `pwd`/vscode/snippets $(HOME)/Library/Application\ Support/Code/User/snippets
+endif
 
 python:
 	rm -f ~/.pythonstartup.py
-
 	ln -s "`pwd`/python/pythonstartup.py" ~/.pythonstartup.py
-
 
 macos:
 ifeq ($(shell uname), Darwin)
