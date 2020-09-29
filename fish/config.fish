@@ -27,4 +27,6 @@ set fish_user_paths "/System/Library/Frameworks/CoreServices.framework/Framework
 # Pipenv
 set -x PIPENV_VENV_IN_PROJECT "enabled"
 
-source .tmdb_api_key
+if test -e $HOME/.tmdb_api_key
+    source .tmdb_api_key
+end
