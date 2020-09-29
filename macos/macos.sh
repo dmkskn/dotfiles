@@ -302,8 +302,14 @@ defaults delete com.apple.dock persistent-apps
 # Remove default apps from the dock
 defaults write com.apple.dock show-recents -int 0
 
+# Auto hide dock
+defaults write com.apple.dock autohide -bool false
+
+# Autohide delay 0.5 seconds
+# defaults write com.apple.dock autohide-delay -float 0.1
+
 # Add app to the dock
-cat apps.txt | while read app
+cat "$(dirname $0)/apps.txt" | while read app
 do
    [ -e "$app" ] && defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 done
@@ -322,10 +328,10 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool t
 defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1.5
 
 # System Preferences > Trackpad > Прокрутка и масштабирование > Направление прокрутки: Обычное
-defaults write NSGlobalDomain com.apple.swipescrolldirection -int 0
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # System Preferences > Trackpad > Выбор и нажатие > Касание для имитации нажатия мыши
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -bool true
 
 # System Preferences > Trackpad > Выбор и нажатие > Имитация re кнопки
 defaults write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
@@ -334,15 +340,13 @@ defaults write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -in
 # defaults write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 3 #  Щелочок в правом нижнем углу
 
 # System Preferences > Trackpad > Прокрутка и масштабирование > Смарт-Масштабирование
-defaults write NSGlobalDomain com.apple.trackpad.twoFingerDoubleTapGesture -int 1 # 0 — отключить
+defaults write NSGlobalDomain com.apple.trackpad.twoFingerDoubleTapGesture -bool true # 0 — отключить
 
 # Miniaturise on double-click
 defaults write NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool true
 
 # Maximize window on double-click
 defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
-
-defaults write NSGlobalDomain com.apple.trackpad.forceClick -int 1
 
 
 # LANGUAGE & REGION SETTINGS
@@ -382,4 +386,4 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 
 
 
-for app in Safari Finder Dock Mail SystemUIServer; do killall "$app"; done
+for app in Safari Finder Dock Mail SystemUIServer; do killall "$app"; done > /dev/null &> /dev/null

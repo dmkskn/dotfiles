@@ -15,3 +15,9 @@ set fish_user_paths /Users/home/.local/bin $fish_user_paths
 
 # Poetry
 set fish_user_paths /Users/home/.poetry/bin $fish_user_paths
+
+# lsregister
+set fish_user_paths "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support" $fish_user_paths
+
+# Pipenv
+set -x PIPENV_VENV_IN_PROJECT "enabled"

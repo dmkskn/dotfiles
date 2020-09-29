@@ -1,13 +1,10 @@
 {
-    "workbench.colorTheme": "Solarized Dark",
     "workbench.statusBar.feedback.visible": false,
-    "workbench.startupEditor": "newUntitledFile",
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
         "--line-length",
         "88"
     ],
-    "editor.minimap.enabled": false,
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
@@ -32,11 +29,14 @@
     "[html]": {
         "editor.lineHeight": 35,
     },
+    "[shellscript]": {
+        "editor.lineHeight": 25,
+    },
     "eslint.run": "onSave",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "html.format.endWithNewline": true,
     "html-css-class-completion.enableEmmetSupport": true,
-    "html.format.wrapLineLength": 300,
+    "html.format.wrapLineLength": 100,
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false,
@@ -44,5 +44,35 @@
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "default",
+            "filenamePattern": "*.html"
+        }
+    ],
+    "window.restoreWindows": "none",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "zenMode.centerLayout": false,
+    "workbench.fontAliasing": "antialiased",
+    "files.exclude": {
+        "**/.venv": true
+    },
+    "python.languageServer": "Pylance",
+    "python.analysis.memory.keepLibraryAst": true,
+    "python.analysis.memory.keepLibraryLocalVariables": true,
+    "python.autoComplete.addBrackets": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "workbench.startupEditor": "newUntitledFile",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false,
+    "editor.wordWrap": "on",
+    "editor.wrappingStrategy": "advanced",
+    "workbench.colorTheme": "GitHub Dark",
+    "explorer.confirmDragAndDrop": false,
+    "python.showStartPage": true,
+    "python.analysis.completeFunctionParens": true,
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "iTerm2.app"
 }
