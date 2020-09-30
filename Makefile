@@ -56,7 +56,7 @@ python:
 	ln -s "`pwd`/python/pythonstartup.py" ~/.pythonstartup.py
 
 macos:
-ifeq ($(shell uname), Darwin)
+ifeq ("$(shell uname)", "Darwin")
 	bash macos/macos.sh
 endif
 

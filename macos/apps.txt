@@ -1,7 +1,5 @@
 /Applications/Safari.app
 /System/Applications/Dictionary.app
-/System/Applications/Reminders.app
-/System/Applications/Notes.app
 /System/Applications/Stickies.app
 /Applications/Visual Studio Code.app
 /Applications/iTerm.app
