@@ -13,10 +13,10 @@ if [ "$(uname)" = "Darwin" ]; then
 
     [ -n $(brew list | grep python) ] && brew install python
     [ -z $(brew list --cask | grep julia) ] brew install --cask julia
-    [ -n $(brew list | grep node) ] && brew install node
+    [ -z $(which node) ] && brew install node
 
-    [ -z $(brew list --cask | grep iterm2) ] && brew install --cask iterm2
-    [ -z $(brew list --cask | grep visual-studio-code) ] && brew install --cask visual-studio-code
+    [ ! -d "/Applications/iTerm.app" ] && brew install --cask iterm2
+    [ ! -d "/Applications/Visual Studio Code.app" ] && brew install --cask visual-studio-code
 else # Linux
     [ -z $(which fish) ] && sudo apt-get install fish
     [ -z $(which vim) ] && sudo apt-get install vim
