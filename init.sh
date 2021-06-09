@@ -9,6 +9,7 @@ if [ "$(uname)" = "Darwin" ]; then
     
     [ -z $(which fish) ] && brew install fish
     [ -z $(which vim) ] && brew install vim
+    [ -z $(which gh) ] && brew install gh
 
     [ -n $(brew list | grep python) ] && brew install python
     [ -z $(brew list --cask | grep julia) ] brew install --cask julia
