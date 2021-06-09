@@ -9,8 +9,8 @@ if [ "$(uname)" = "Darwin" ]; then
     [ -z $(which fish) ] && brew install fish
     [ -z $(which emacs) ] && brew install emacs
     [ -z $(which vim) ] && brew install vim
-    [ -z $(brew list --cask | grep iterm2) ] && brew cask install iterm2
-    [ -z $(brew list --cask | grep visual-studio-code) ] && brew cask install visual-studio-code
+    [ -z $(brew list --cask | grep iterm2) ] && brew install --cask iterm2
+    [ -z $(brew list --cask | grep visual-studio-code) ] && brew install --cask visual-studio-code
 else # Linux
     [ -z $(which fish) ] && sudo apt-get install fish
     [ -z $(which emacs) ] && sudo apt-get install emacs
