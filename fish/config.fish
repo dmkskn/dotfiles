@@ -13,7 +13,14 @@ set -x PYTHONSTARTUP $HOME/.pythonstartup.py
 set -gx EDITOR vim
 
 # Pyenv
-set fish_user_paths $HOME/.pyenv $fish_user_paths
+# set fish_user_paths $HOME/.pyenv $fish_user_paths
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
+# Load pyenv automatically by appending
+# the following to ~/.config/fish/config.fish:
+status is-login; and pyenv init --path | source
+pyenv init - | source
 
 # Pipx
 set fish_user_paths $HOME/.local/bin $fish_user_paths
