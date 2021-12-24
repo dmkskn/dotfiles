@@ -45,12 +45,9 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "default",
-            "filenamePattern": "*.html"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.html": "default"
+    },
     "window.restoreWindows": "none",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "zenMode.centerLayout": false,
