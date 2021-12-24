@@ -1,5 +1,5 @@
 [user]
-	name = dmkskn
+	name = Dima Koskin
 	email = dmkskn@icloud.com
 
 [core]
@@ -12,3 +12,9 @@
     l = log
     ll = log --oneline
     uncommit = reset HEAD^
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
