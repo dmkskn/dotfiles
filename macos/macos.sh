@@ -282,7 +282,7 @@ defaults write com.apple.finder StandardViewSettings '{
 # DOCK SETTINGS
 
 # System Preferences > Dock > Size:
-defaults write com.apple.dock tilesize -int 35
+defaults write com.apple.dock tilesize -int 42
 
 # System Preferences > Dock > Magnification:
 defaults write com.apple.dock magnification -bool false
@@ -299,21 +299,19 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Remove default apps from the dock
 defaults delete com.apple.dock persistent-apps
 
-# Remove default apps from the dock
+# Don't show recents
 defaults write com.apple.dock show-recents -int 0
 
 # Auto hide dock
 defaults write com.apple.dock autohide -bool false
 
-# Autohide delay 0.5 seconds
-# defaults write com.apple.dock autohide-delay -float 0.1
+
 
 # Add app to the dock
 cat "$(dirname $0)/apps.txt" | while read app
 do
    [ -e "$app" ] && defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 done
-
 
 
 # TRACKPAD SETTINGS
@@ -356,7 +354,6 @@ defaults write NSGlobalDomain AppleLanguages -array "en-RU" "ru-RU"
 
 # Language & Region settings > Region
 defaults write NSGlobalDomain AppleLocale -string "en_RU"
-
 
 
 # KEYBOARD INPUTS

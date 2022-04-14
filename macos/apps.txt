@@ -2,4 +2,6 @@
 /System/Applications/Dictionary.app
 /System/Applications/Stickies.app
 /Applications/Visual Studio Code.app
+/Applications/Xcode.app
 /Applications/iTerm.app
+
