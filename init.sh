@@ -41,6 +41,9 @@ if [ "$OS" = "Darwin" ]; then
         [ -z "$(pipx list | grep $tool)" ] && pipx install "$tool" && echo "$tool was installed with pipx." || echo "$tool is already installed."
     done
 
+    # Install ipython if not already installed
+    [ -z "$(pip list | grep ipython)" ] && pip install ipython && echo "ipython was installed." || echo "ipython is already installed."
+
     # Install Node.js if not already installed
     [ -z "$(which node)" ] && brew install node || echo "node is already installed."
 
