@@ -12,7 +12,13 @@ if [ "$(uname)" = "Darwin" ]; then
     [ -z $(which vim) ] && brew install vim && echo "vim was installed." || echo "vim is already installed."
     [ -z $(which gh) ] && brew install gh && echo "gh was installed." || echo "gh is already installed."
 
-    [ -z $(brew list | grep pyenv) ] && brew install pyenv && echo "pyenv was installed." || echo "pyenv is already installed."
+    [ -z $(which pyenv) ] && brew install pyenv && echo "pyenv was installed." || echo "pyenv is already installed."
+    [ -z "$(which pipx)" ] && brew install pipx && pipx ensurepath && echo "pipx was installed." || echo "pipx is already installed."
+
+    for tool in poetry black flake8 mypy; do
+        [ -z "$(pipx list | grep $tool)" ] && pipx install "$tool" && echo "$tool was installed with pipx." || echo "$tool is already installed."
+    done
+
     [ -z $(which node) ] && brew install node || echo "node is already installed."
 
     [ ! -d "/Applications/iTerm.app" ] && brew install --cask iterm2 && echo "iterm was installed." || echo "iterm is already installed."
