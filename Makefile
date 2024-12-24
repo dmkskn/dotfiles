@@ -24,9 +24,8 @@ git:
 	ln -s "`pwd`/git/gitignore" ~/.gitignore
 
 macos:
-	ifeq ("$(shell uname)", "Darwin")
-		bash macos/macos.sh
-	endif
-
+ifeq ("$(shell uname)", "Darwin")
+	bash macos/macos.sh
+endif
 
 .PHONY: fish vim git python macos
