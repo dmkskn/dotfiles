@@ -23,10 +23,6 @@ git:
 	ln -s "`pwd`/git/gitconfig" ~/.gitconfig
 	ln -s "`pwd`/git/gitignore" ~/.gitignore
 
-python:
-	rm -f ~/.pythonstartup.py
-	ln -s "`pwd`/python/pythonstartup.py" ~/.pythonstartup.py
-
 macos:
 	ifeq ("$(shell uname)", "Darwin")
 		bash macos/macos.sh
