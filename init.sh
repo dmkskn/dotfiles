@@ -7,7 +7,6 @@ set -e
 if [ "$(uname)" = "Darwin" ]; then
     [ -d $(xcode-select --print-path) ] || xcode-select --install
     [ -z $(which brew) ] && curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | /bin/bash
-    [ -n $(brew tap | grep "homebrew/cask") ] && brew tap homebrew/cask
 
     [ -z $(which fish) ] && brew install fish && echo "fish was installed." || echo "fish is already installed."
     [ -z $(which vim) ] && brew install vim && echo "vim was installed." || echo "vim is already installed."
