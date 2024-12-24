@@ -25,6 +25,14 @@ if [ "$OS" = "Darwin" ]; then
     # Install pyenv if not already installed
     [ -z "$(which pyenv)" ] && brew install pyenv && echo "pyenv was installed." || echo "pyenv is already installed."
     
+    # Install the latest Python version via pyenv
+    if [ -n "$(which pyenv)" ]; then
+        latest_python_version=$(pyenv install --list | grep -E '^\s*3\.[0-9]+\.[0-9]+$' | tail -1 | tr -d ' ')
+        [ -z "$(pyenv versions | grep $latest_python_version)" ] && pyenv install $latest_python_version && echo "Python $latest_python_version installed via pyenv." || echo "Python $latest_python_version is already installed."
+        pyenv global $latest_python_version
+        pip install --upgrade pip setuptools wheel
+    fi
+
     # Install pipx if not already installed and ensure its path is set
     [ -z "$(which pipx)" ] && brew install pipx && pipx ensurepath && echo "pipx was installed." || echo "pipx is already installed."
 
