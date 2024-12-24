@@ -1,4 +1,4 @@
-all: init fish vim git python macos
+all: init fish vim git python
 
 init:
 	bash init.sh
@@ -28,4 +28,4 @@ ifeq ("$(shell uname)", "Darwin")
 	bash macos/macos.sh
 endif
 
-.PHONY: fish vim git python macos
+.PHONY: init fish vim git python
